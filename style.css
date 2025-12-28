@@ -1,0 +1,288 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- 1. Top Navigation/Header --- */
+.header {
+    background-color: #5d258a; /* Kapruka Purple Primary */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo-search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 40px; 
+}
+
+.search-box {
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 450px; 
+    background-color: white;
+}
+
+.search-box input {
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #f1c40f; /* Kapruka Yellow */
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.search-box button:hover {
+    background-color: #d4ac0d;
+}
+
+.account-icons {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    gap: 20px;
+}
+
+.language-select {
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.account-icons i {
+    cursor: pointer;
+}
+
+/* --- Main Navigation Bar --- */
+.main-nav {
+    background-color: #4a1d6e; /* Slightly darker purple */
+    color: white;
+    padding: 0 5%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-links a, .all-categories {
+    color: white;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* --- 2. Breadcrumbs --- */
+.breadcrumbs {
+    padding: 15px 5%;
+    font-size: 13px;
+    color: #666;
+    background-color: white;
+}
+
+/* --- 3. Hero Section (CENTERED WITH BLACK BACKGROUND) --- */
+.hero-banner-dark {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Increased height for better centering */
+    background-color: #000; 
+    overflow: hidden;
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Darker opacity to make white text pop */
+    display: block;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Changed to radial or centered overlay for focus */
+    background: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center;    /* Vertical Center */
+    justify-content: center; /* Horizontal Center */
+}
+
+.hero-content-centered {
+    max-width: 800px;
+    text-align: center; /* Centers the words */
+    color: white;
+    padding: 20px;
+    z-index: 2;
+}
+
+.hero-content-centered h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero-content-centered p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+/* Centered Search Bar Box */
+.restaurant-search-bar {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    max-width: 650px;
+    margin: 0 auto; /* Ensures the search bar block is centered */
+}
+
+.restaurant-search-bar i {
+    color: #888;
+    margin-left: 15px;
+}
+
+.restaurant-search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.find-food-btn {
+    background-color: #f1c40f;
+    border: none;
+    padding: 15px 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.find-food-btn:hover {
+    background-color: #d4ac0d;
+}
+
+/* --- 4. Category Grid --- */
+.category-carousel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px 5%;
+    gap: 30px;
+    background-color: white;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover img {
+    transform: scale(1.03);
+}
+
+.category-info {
+    padding: 15px 0;
+}
+
+.category-info h3 {
+    font-size: 16px;
+    color: #222;
+    border-left: 4px solid #f1c40f;
+    padding-left: 12px;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.order-btn {
+    background-color: #5d428a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1100px) {
+    .category-carousel { grid-template-columns: repeat(3, 1fr); }
+    .hero-content-centered h1 { font-size: 28px; }
+}
+
+@media (max-width: 768px) {
+    .category-carousel { grid-template-columns: repeat(2, 1fr); }
+    .hero-banner-dark { height: auto; padding: 60px 0; }
+    .restaurant-search-bar { flex-direction: column; background: transparent; box-shadow: none; width: 90%; }
+    .restaurant-search-bar input { width: 100%; background: white; border-radius: 4px; margin-bottom: 10px; padding: 12px; }
+    .restaurant-search-bar i { display: none; }
+    .find-food-btn { width: 100%; border-radius: 4px; }
+}
